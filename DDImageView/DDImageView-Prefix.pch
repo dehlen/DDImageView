@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DDImageView' target in the 'DDImageView' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

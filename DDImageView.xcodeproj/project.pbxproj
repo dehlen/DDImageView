@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		633ACB99164AC1AA00F4901B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633ACB98164AC1AA00F4901B /* Cocoa.framework */; };
+		633ACBA3164AC1AA00F4901B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 633ACBA1164AC1AA00F4901B /* InfoPlist.strings */; };
+		633ACBA5164AC1AA00F4901B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 633ACBA4164AC1AA00F4901B /* main.m */; };
+		633ACBA9164AC1AA00F4901B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 633ACBA7164AC1AA00F4901B /* Credits.rtf */; };
+		633ACBAC164AC1AA00F4901B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 633ACBAB164AC1AA00F4901B /* AppDelegate.m */; };
+		633ACBAF164AC1AA00F4901B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633ACBAD164AC1AA00F4901B /* MainMenu.xib */; };
+		633ACBBB164AC2E900F4901B /* DDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 633ACBBA164AC2E900F4901B /* DDImageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		633ACB94164AC1AA00F4901B /* DDImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		633ACB98164AC1AA00F4901B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		633ACB9B164AC1AA00F4901B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		633ACB9C164AC1AA00F4901B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		633ACB9D164AC1AA00F4901B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		633ACBA0164AC1AA00F4901B /* DDImageView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDImageView-Info.plist"; sourceTree = "<group>"; };
+		633ACBA2164AC1AA00F4901B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		633ACBA4164AC1AA00F4901B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		633ACBA6164AC1AA00F4901B /* DDImageView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDImageView-Prefix.pch"; sourceTree = "<group>"; };
+		633ACBA8164AC1AA00F4901B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		633ACBAA164AC1AA00F4901B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		633ACBAB164AC1AA00F4901B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		633ACBAE164AC1AA00F4901B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		633ACBB9164AC2E900F4901B /* DDImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDImageView.h; sourceTree = "<group>"; };
+		633ACBBA164AC2E900F4901B /* DDImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDImageView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		633ACB91164AC1AA00F4901B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633ACB99164AC1AA00F4901B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		633ACB89164AC1A900F4901B = {
+			isa = PBXGroup;
+			children = (
+				633ACB9E164AC1AA00F4901B /* DDImageView */,
+				633ACB97164AC1AA00F4901B /* Frameworks */,
+				633ACB95164AC1AA00F4901B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		633ACB95164AC1AA00F4901B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				633ACB94164AC1AA00F4901B /* DDImageView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		633ACB97164AC1AA00F4901B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				633ACB98164AC1AA00F4901B /* Cocoa.framework */,
+				633ACB9A164AC1AA00F4901B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		633ACB9A164AC1AA00F4901B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				633ACB9B164AC1AA00F4901B /* AppKit.framework */,
+				633ACB9C164AC1AA00F4901B /* CoreData.framework */,
+				633ACB9D164AC1AA00F4901B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		633ACB9E164AC1AA00F4901B /* DDImageView */ = {
+			isa = PBXGroup;
+			children = (
+				633ACBAA164AC1AA00F4901B /* AppDelegate.h */,
+				633ACBAB164AC1AA00F4901B /* AppDelegate.m */,
+				633ACBB9164AC2E900F4901B /* DDImageView.h */,
+				633ACBBA164AC2E900F4901B /* DDImageView.m */,
+				633ACBAD164AC1AA00F4901B /* MainMenu.xib */,
+				633ACB9F164AC1AA00F4901B /* Supporting Files */,
+			);
+			path = DDImageView;
+			sourceTree = "<group>";
+		};
+		633ACB9F164AC1AA00F4901B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				633ACBA0164AC1AA00F4901B /* DDImageView-Info.plist */,
+				633ACBA1164AC1AA00F4901B /* InfoPlist.strings */,
+				633ACBA4164AC1AA00F4901B /* main.m */,
+				633ACBA6164AC1AA00F4901B /* DDImageView-Prefix.pch */,
+				633ACBA7164AC1AA00F4901B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		633ACB93164AC1AA00F4901B /* DDImageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 633ACBB2164AC1AA00F4901B /* Build configuration list for PBXNativeTarget "DDImageView" */;
+			buildPhases = (
+				633ACB90164AC1AA00F4901B /* Sources */,
+				633ACB91164AC1AA00F4901B /* Frameworks */,
+				633ACB92164AC1AA00F4901B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDImageView;
+			productName = DDImageView;
+			productReference = 633ACB94164AC1AA00F4901B /* DDImageView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		633ACB8B164AC1A900F4901B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "David Ehlen";
+			};
+			buildConfigurationList = 633ACB8E164AC1A900F4901B /* Build configuration list for PBXProject "DDImageView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 633ACB89164AC1A900F4901B;
+			productRefGroup = 633ACB95164AC1AA00F4901B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				633ACB93164AC1AA00F4901B /* DDImageView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		633ACB92164AC1AA00F4901B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633ACBA3164AC1AA00F4901B /* InfoPlist.strings in Resources */,
+				633ACBA9164AC1AA00F4901B /* Credits.rtf in Resources */,
+				633ACBAF164AC1AA00F4901B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		633ACB90164AC1AA00F4901B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633ACBA5164AC1AA00F4901B /* main.m in Sources */,
+				633ACBAC164AC1AA00F4901B /* AppDelegate.m in Sources */,
+				633ACBBB164AC2E900F4901B /* DDImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		633ACBA1164AC1AA00F4901B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				633ACBA2164AC1AA00F4901B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		633ACBA7164AC1AA00F4901B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				633ACBA8164AC1AA00F4901B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		633ACBAD164AC1AA00F4901B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				633ACBAE164AC1AA00F4901B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		633ACBB0164AC1AA00F4901B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		633ACBB1164AC1AA00F4901B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		633ACBB3164AC1AA00F4901B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDImageView/DDImageView-Prefix.pch";
+				INFOPLIST_FILE = "DDImageView/DDImageView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		633ACBB4164AC1AA00F4901B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DDImageView/DDImageView-Prefix.pch";
+				INFOPLIST_FILE = "DDImageView/DDImageView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		633ACB8E164AC1A900F4901B /* Build configuration list for PBXProject "DDImageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				633ACBB0164AC1AA00F4901B /* Debug */,
+				633ACBB1164AC1AA00F4901B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		633ACBB2164AC1AA00F4901B /* Build configuration list for PBXNativeTarget "DDImageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				633ACBB3164AC1AA00F4901B /* Debug */,
+				633ACBB4164AC1AA00F4901B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 633ACB8B164AC1A900F4901B /* Project object */;
+}
