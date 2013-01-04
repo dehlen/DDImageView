@@ -9,8 +9,8 @@
 #import <Cocoa/Cocoa.h>
 
 @interface DDImageView : NSImageView {
-BOOL startAnimation;
-float phase;
-NSTimer *timer;
+    BOOL startAnimation;
+    float phase;
+    NSTimer *timer;
 }
 @end

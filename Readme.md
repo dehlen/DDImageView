@@ -13,13 +13,13 @@ Super simple. Just drag & drop DDImageView.h/.m into your project. In your Proje
 
 If you want to support other or more files then just images have a look in 
 ```
--(BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender { ... }
 ```
 and change the NSPasteboard Types.
 
 If you want to change the label "Drop Image Here" have a look at the
 ```
--(void)drawRect:(CGRect)rect {
+- (void)drawRect:(CGRect)rect { ... }
 ```
 ## ARC
 

@@ -16,12 +16,14 @@
 #endif
 
 
--(void)awakeFromNib {
+- (void)awakeFromNib
+{
     startAnimation = NO;
     phase = 0.0f;
 }
 
-- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
+- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
+{
     startAnimation = YES;
     if(timer != nil) {
         [timer invalidate];
@@ -121,7 +123,7 @@
 }
 
 
--(void)drawRect:(CGRect)rect
+- (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
     if (!self.image) {
