@@ -37,15 +37,18 @@
     return NSDragOperationCopy;
 }
 
+-(void)cancelAnimation {
+    startAnimation = NO;
+    [timer invalidate];
+    phase = 0.0f;
+    [self setNeedsDisplay:YES];
+}
 
 
 
 - (void)draggingExited:(id <NSDraggingInfo>)sender
 {
-    startAnimation = NO;
-    [timer invalidate];
-    phase = 0.0f;
-    [self setNeedsDisplay:YES];
+    [self cancelAnimation];
 }
 
 
@@ -67,6 +70,8 @@
     {
         NSRunAlertPanel(@"Drag & Drop Error", @"Sorry, but the last operation failed",
 						nil, nil, nil);
+        [self cancelAnimation];
+
         return NO;
     }
     else
@@ -90,6 +95,8 @@
 								[NSString stringWithFormat:
 								 @"Sorry, but the file at \"%@\" failed to open",
 								 path], nil, nil, nil);
+               [self cancelAnimation];
+                
                 return NO;
             }
             else
