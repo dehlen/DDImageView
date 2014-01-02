@@ -8,6 +8,16 @@
 
 #import "DDImageView.h"
 
+/* @danieljfarrell
+   Adding a property which saves the size of the
+   DDImageView as defined in the Nib. This is to
+   prevent the dashed rect from jittering on 
+   resize.
+*/
+@interface DDImageView ()
+@property NSRect boundsFromNib;
+@end
+
 @implementation DDImageView
 
 
@@ -19,6 +29,7 @@
 -(void)awakeFromNib {
     startAnimation = NO;
     phase = 0.0f;
+    self.boundsFromNib = self.bounds;
 }
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
@@ -131,6 +142,8 @@
             [[NSColor colorWithCalibratedWhite:0.167 alpha:1.000] set];
         }
         
+        // always line and notice with respect to the initial rect
+        rect = self.boundsFromNib;
         NSBezierPath *roundPath = [NSBezierPath bezierPathWithRoundedRect:rect xRadius:30.0f yRadius:30.0f];
         [roundPath addClip];
         [roundPath closePath];
