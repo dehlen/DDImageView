@@ -18,8 +18,8 @@ If you want to support other or more files then just images have a look in
 and change the NSPasteboard Types.
 
 You can always customize the drawn control text and the animationDuration via the methods ```
-setControlText:(NSString *)``` and ```setAnimationDuration:(float)
-```
+setControlText:(NSString *)``` and ```setAnimationDuration:(float)```
+
 
 Be sure to always call ```[imageView setNeedsDisplay:YES]; ``` to make sure the refreshed values get drawn correctly.
 
