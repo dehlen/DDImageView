@@ -32,12 +32,27 @@
     self.boundsFromNib = self.bounds;
 }
 
+-(id)init {
+    return [self initWithControlText:@"Drop here" andAnimationDuration:0.1];
+}
+
+-(id)initWithControlText:(NSString *)controlText andAnimationDuration:(float)animationDuration {
+    self = [super init];
+    if(self) {
+    self.controlText = controlText;
+    self.animationDuration = animationDuration;
+    }
+    
+    return self;
+}
+
+
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
     startAnimation = YES;
     if(timer != nil) {
         [timer invalidate];
     }
-    timer = [NSTimer scheduledTimerWithTimeInterval: 0.1
+    timer = [NSTimer scheduledTimerWithTimeInterval: self.animationDuration
                                              target: self
                                            selector:@selector(tick:)
                                            userInfo: nil
@@ -54,8 +69,6 @@
     phase = 0.0f;
     [self setNeedsDisplay:YES];
 }
-
-
 
 - (void)draggingExited:(id <NSDraggingInfo>)sender
 {
@@ -102,10 +115,7 @@
 			
             if (nil == newImage)
             {
-                NSRunAlertPanel(@"File not Supported",
-								[NSString stringWithFormat:
-								 @"Sorry, but the file at \"%@\" failed to open",
-								 path], nil, nil, nil);
+                NSRunAlertPanel(@"File not Supported",@"%@", nil, nil, nil,[NSString stringWithFormat:@"Sorry, but the file at \"%@\" failed to open",path]);
                [self cancelAnimation];
                 
                 return NO;
@@ -129,6 +139,14 @@
 {
     phase += 8.0f;
     [self setNeedsDisplay:YES];
+}
+
+- (CGFloat)widthOfString:(NSString *)string withFont:(NSFont *)font {
+    if(string != nil && string.length > 0) {
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
+    return [[[NSAttributedString alloc] initWithString:string attributes:attributes] size].width;
+    }
+    return 0.0;
 }
 
 
@@ -156,10 +174,10 @@
         [framePath setLineDash:pattern count:2 phase:phase];
         [framePath stroke];
         [framePath closePath];
-        
-        [@"Drop Image Here" drawAtPoint:NSMakePoint((rect.size.width/2.0f-80.0f), (rect.size.height / 2.0f-15.0f)) withAttributes:@{ NSForegroundColorAttributeName : [NSColor colorWithCalibratedRed:0.65f green:0.65f blue:0.65f alpha:1.00f], NSFontAttributeName : [NSFont systemFontOfSize:20.0f] }];
-         
-       
+        if(self.controlText == nil || self.controlText.length == 0) {
+            self.controlText = @"Drop here";
+        }
+        [self.controlText drawAtPoint:NSMakePoint((rect.size.width/2.0f-[self widthOfString:self.controlText withFont:[NSFont systemFontOfSize:20.0f]]/2), (rect.size.height / 2.0f-15.0f)) withAttributes:@{ NSForegroundColorAttributeName : [NSColor colorWithCalibratedRed:0.65f green:0.65f blue:0.65f alpha:1.00f], NSFontAttributeName : [NSFont systemFontOfSize:20.0f] }];
         
     }
 }

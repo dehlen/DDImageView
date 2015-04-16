@@ -7,7 +7,7 @@ DDImageView gives you the ability to add a NSImageView to your Xcode project whi
 
 ## Installation
 
-Super simple. Just drag & drop DDImageView.h/.m into your project. In your Project, find the .xib or .storyboard file and go to the Identitiy inspector of your NSImageView. Just enter DDImageView in the Custom Class Textfield and you should good to go.
+Super simple. Just drag & drop DDImageView.h/.m into your project. In your Project, find the .xib or .storyboard file and go to the Identitiy inspector of your NSImageView. Just enter DDImageView in the Custom Class Textfield and you should be good to go.
 
 ## Usage
 
@@ -17,10 +17,14 @@ If you want to support other or more files then just images have a look in
 ```
 and change the NSPasteboard Types.
 
-If you want to change the label "Drop Image Here" have a look at the
+You can always customize the drawn control text and the animationDuration via the methods ```
+setControlText:(NSString *)``` and ```setAnimationDuration:(float)
 ```
--(void)drawRect:(CGRect)rect {
-```
+
+Be sure to always call ```[imageView setNeedsDisplay:YES]; ``` to make sure the refreshed values get drawn correctly.
+
+This repository contains a simple project which you always can have a look at to implement this control in your application.
+
 ## ARC
 
 This version uses only ARC. If you still use MRC in your project feel free to fork this project. Also you will get 1 error by first start of the project. This is because it will recognize that you do not use ARC and will give you a solution how to implement this arc file in your non-arc project.

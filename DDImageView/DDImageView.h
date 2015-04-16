@@ -13,4 +13,10 @@ BOOL startAnimation;
 float phase;
 NSTimer *timer;
 }
+
+@property (nonatomic,copy) NSString *controlText;
+@property (nonatomic,assign) float animationDuration;
+
+-(void)cancelAnimation;
+
 @end

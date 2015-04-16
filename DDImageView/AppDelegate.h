@@ -7,9 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DDImageView.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    IBOutlet DDImageView *imageView;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+
+-(IBAction)clear:(id)sender;
 
 @end
